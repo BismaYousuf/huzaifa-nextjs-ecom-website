@@ -7,11 +7,11 @@ import Link from "next/link"
 
 import { Menu } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
-
+import { FeaturedProducts } from "./featured-products"
 
 export default function Component() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
+    <div className="min-h-screen bg-blue-900">
       {/* Enhanced Navbar */}
       <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
@@ -112,11 +112,12 @@ export default function Component() {
           <div className="relative">
             <div className="relative z-10">
               <Image
-                src="/placeholder.svg?height=600&width=500"
-                alt="Hero Product"
+                src="/watch.jpg"
+                alt="E-commerce Hero Product"
                 width={500}
                 height={600}
                 className="rounded-2xl shadow-2xl"
+                priority
               />
             </div>
 
@@ -160,6 +161,9 @@ export default function Component() {
           </div>
         </div>
       </section>
+
+      {/* Featured Products Section */}
+      <FeaturedProducts />
     </div>
   )
 }
